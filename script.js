@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";
+const GEMINI_API_KEY = window.GEMINI_API_KEY || "";
 
 async function askVoxMind() {
     const inputField = document.querySelector('input');
