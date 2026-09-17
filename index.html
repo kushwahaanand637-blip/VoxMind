@@ -1,35 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoxMind - AI Assistant</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxMind AI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">Vox<span>Mind</span></div>
-            <p class="subtitle">Ask any question and get instant smart answers</p>
-        </header>
-
-        <main>
-            <div class="chat-box" id="chatBox">
-                <div class="message bot-message">
-                    👋 Hello! Main VoxMind hu. Aap kya poochna chahte hain?
-                </div>
-            </div>
-
-            <div class="input-area">
-                <input type="text" id="userInput" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
-                <button onclick="askQuestion()" id="sendBtn">
-                    <span>Ask</span>
-                </button>
-            </div>
-        </header>
+  <div class="sidebar">
+    <h2>VoxMind</h2>
+    <button class="new-chat">+ New Chat</button>
+  </div>
+  
+  <div class="chat-container">
+    <div class="chat-header">
+      <h3>VoxMind AI (Gemini 1.5)</h3>
+    </div>
+    
+    <div class="chat-box" id="chatBox">
+      <div class="message ai-message">
+        Hello! Main VoxMind hoon. Main aapki kya madad kar sakta hoon?
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Message VoxMind..." onkeydown="if(event.key==='Enter') askVoxMind()">
+      <button onclick="askVoxMind()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
